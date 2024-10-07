@@ -1,0 +1,123 @@
+/* WhatsApp Button Styling */
+.whatsapp_button {
+    position: fixed;
+    bottom: 15px;
+    right: 15px;
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    z-index: 999;
+  }
+  
+  /* WhatsApp Icon */
+  .whatsapp_icon {
+    background-color: #25d366;
+    padding: 15px;
+    border-radius: 50%;
+    position: relative;
+    /* animation: heartbeat 1.5s infinite; */
+  }
+  
+  .whatsapp_svg {
+    width: 30px;
+    height: 30px;
+    color: white;
+  }
+
+  /* Adding wave animation around WhatsApp button */
+  .whatsapp_icon::before,
+  .whatsapp_icon::after {
+    content: "";
+    position: absolute;
+    border-radius: 50%;
+    background-color: rgba(37, 211, 102, 0.5); /* Light green for wave */
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    animation: wave 3s ease-out infinite;
+  }
+  
+  .whatsapp_icon::after {
+    animation-delay: 1.5s; /* Delayed wave for second ripple */
+  }
+  
+  /* Heartbeat Animation */
+  @keyframes heartbeat {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.2);
+    }
+  }
+
+  /* Wave Animation */
+  @keyframes wave {
+    0% {
+      transform: scale(1);
+      opacity: 1;
+    }
+    100% {
+      transform: scale(2.5); /* Expand the wave */
+      opacity: 0; /* Fade out as it expands */
+    }
+  }
+  
+  /* Bubble Container */
+  .bubble_container {
+    position: absolute;
+    left: -60px; /* Moved to the left side */
+    top: -10px;  /* Moved slightly upwards */
+    display: flex;
+    align-items: center;
+  }
+  
+  /* Bubble Styling */
+  .bubble {
+    background-color: white;
+    padding: 5px;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 50px;
+    height: 24px;
+  }
+  
+  /* Dots inside the bubble */
+  .bubble span {
+    display: block;
+    width: 6px;
+    height: 6px;
+    background-color: #6b7280;
+    border-radius: 50%;
+    animation: bounce 2s infinite ease-in-out;
+  }
+  
+  /* Delay for second and third dots */
+  .bubble span:nth-child(2) {
+    animation-delay: 0.2s;
+  }
+  
+  .bubble span:nth-child(3) {
+    animation-delay: 0.4s;
+  }
+  
+  /* Bouncing Dots Animation */
+  @keyframes bounce {
+    0%, 20% {
+      transform: translateY(0); /* Start */
+    }
+    50% {
+      transform: translateY(-5px); /* Bounce up */
+    }
+    80% {
+      transform: translateY(0); /* Bounce back to original position */
+    }
+    100% {
+      transform: translateY(0); /* Back to initial position and pause */
+    }
+  }

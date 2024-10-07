@@ -1,0 +1,35 @@
+{
+  "name": "nova-clinic",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "@heroicons/react": "^2.1.5",
+    "@svgr/webpack": "^8.1.0",
+    "autoprefixer": "^10.4.20",
+    "libphonenumber-js": "^1.11.9",
+    "next": "14.2.13",
+    "next-i18next": "^15.3.1",
+    "next-intl": "^3.19.4",
+    "react": "^18",
+    "react-animated-numbers": "^0.18.0",
+    "react-dom": "^18",
+    "react-grid-gallery": "^1.0.1",
+    "react-hook-form": "^7.53.0",
+    "react-phone-input-2": "^2.15.1",
+    "sharp": "^0.33.5",
+    "sweetalert2": "^11.14.1",
+    "swiper": "^11.1.14"
+  },
+  "devDependencies": {
+    "eslint": "^8",
+    "eslint-config-next": "14.2.13",
+    "postcss": "^8.4.47",
+    "tailwindcss": "^3.4.1"
+  }
+}

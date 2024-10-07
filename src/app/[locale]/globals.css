@@ -1,0 +1,162 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: #fff;
+  --background-end-rgb: 255, 255, 255;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 0, 0, 0;
+    --background-end-rgb: 0, 0, 0;
+  }
+}
+
+body {
+  font-family: 'Roboto', sans-serif inherit;
+  color: rgb(var(--foreground-rgb));
+  background: var(--background-start-rgb);
+  /* linear-gradient(
+      to bottom,
+      transparent,
+      rgb(var(--background-end-rgb))
+    )
+    rgb(var(--background-start-rgb)); */
+}
+.family-default{
+  font-family: "Montserrat" inherit; /* Replace 'Roboto' with the desired font */
+}
+
+.family-mix{
+  font-family: "Montserrat", Sans-serif inherit; /* Replace 'Roboto' with the desired font */
+}
+
+
+.swiper-pagination {
+  position: absolute;
+  bottom: 20px; /* Adjust this value to move it further from the content */
+  left: 0;
+  width: 100%;
+  text-align: center; /* Center the dots */
+}
+
+.swiper-pagination-bullet {
+  background-color: #ffffff; /* Default dot color */
+  opacity: 0.6;
+  height: 9px !important; /* Dot width */
+  width: 9px !important; /* Dot width */
+  margin-top: 10px !important; /* Spacing between dots */
+  gap: 10px !important; /* Spacing between dots */
+}
+
+.swiper-pagination-bullet-active {
+  background-color: #21234A !important; /* Active dot color */
+  opacity: 1;
+}
+
+
+
+
+.package-card-container{
+  @apply bg-white p-6 rounded-lg shadow-lg h-72 w-80 relative flex items-center justify-center flex-col
+}
+.package-card-content{
+  @apply mb-4 flex justify-center items-center absolute top-[-2rem] w-96
+}
+.package-card-image{
+  @apply text-4xl mb-4 rounded-full bg-[#252625] indent-0 w-24 h-24 flex items-center justify-center
+}
+
+.home-section-main{
+  @apply  relative bg-cover bg-center h-screen text-white flex justify-center py-2;
+  background-image: url('/images/nova/hero-bg.webp');
+}
+.home-section{
+  @apply absolute inset-0;
+  background-color: transparent;
+  --background-overlay: '';
+  background-image: linear-gradient(164deg, #166588B3 0%, #031A24B2 100%);
+
+}
+.home-section-content{
+  @apply bg-[url('/images/dental/hero-mobile-bg.webp')] bg-cover bg-center lg:bg-[url('/images/dental/hero-mobile.webp')];
+  /* background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url('/images/dental/hero@2x.webp'); */
+
+  
+}
+
+.doctor-detail-main{
+  @apply relative bg-cover bg-center md:py-16 py-2 flex justify-center items-center bg-white lg:bg-[url('/images/nova/about-doctor-bg.webp')]
+}
+
+.doctor-detail-temp{
+  @apply absolute inset-0 bg-primary bg-opacity-50 hidden md:block;
+
+}
+
+.custom-btn{
+  @apply py-3 px-10  text-white shadow-lg cursor-pointer rounded-lg text-sm lg:text-[22px] font-semibold mt-10 family-mix;
+}
+
+
+.animate-pulse{
+  animation: pulse 2s linear(0 0%, 0.83 98.01%) infinite;
+}
+.disabled-btn {
+  @apply bg-gray-300 text-gray-300 cursor-not-allowed opacity-65 font-semibold py-3 px-10 !important;
+}
+
+
+
+/* //BMI Section */
+
+.bmi-section-main{
+  @apply  relative bg-cover bg-center text-white flex justify-center py-2;
+  background-image: url('/images/nova/form-bg.webp');
+}
+.bmi-section{
+  @apply absolute inset-0;
+  background-color: transparent;
+  --background-overlay: '';
+  background-image: linear-gradient(164deg, #166588B3 0%, #031A24B2 100%);
+
+}
+.bmi-bar{
+    margin-top: 20px;
+    width: 100%;
+    height: 20px;
+    background: linear-gradient(to right, #4CAF50, #FFEB3B, #FF5722);
+    position: relative;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.running-animation {
+  position: relative;
+  animation: run 2s linear infinite;
+}
+
+@keyframes run {
+  0% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(100px); /* Adjust this value for more/less movement */
+  }
+  100% {
+    transform: translateX(40%);
+
+}
+}
+.bmi-section-content{
+  @apply flex flex-col md:border-black md:border-y-4 border-y-0  border-x-0 md:border-x-4 rounded-2xl w-auto mt-10 my-auto md:w-[38rem] md:my-[-36px] items-center justify-center bg-white text-primary m-4 md:m-0;
+}

@@ -1,7 +1,7 @@
 "use client";
 import React from "react";
 import Image from "next/image";
-import checkbox from '../../../../public/images/dental/checkbox.svg';
+import checkbox from '../../../../public/images/nova/checkbox.svg';
 import { useTranslations } from "next-intl";
 const DoctorDetailSection = () => {
     const t = useTranslations('common');

@@ -1,7 +1,6 @@
 "use client";
 import React, { useState } from "react";
 import Image from "next/image";
-import checkbox from '../../../../public/images/dental/checkbox.svg';
 import { useTranslations } from "next-intl";
 import { capitalizeFirstLetter } from "@/app/utils/helpers";
 const ProcedureSection = () => {
@@ -76,7 +75,7 @@ const ProcedureSection = () => {
             </div>
 
             {/* Tab Content */}
-            <div className="bg-white rounded-lg p-6 flex flex-col md:flex-row">
+            <div className="bg-white rounded-lg p-6 flex flex-col md:flex-row text-primary">
                 {/* Image */}
                 <div className="md:w-1/2 mb-6 md:mb-0">
                     <Image
